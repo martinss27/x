@@ -71,7 +71,7 @@ WSGI_APPLICATION = 'django_config.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'JobTrackdb',
+            'NAME': 'JobTrackerdb',
             'USER': 'postgres',
             'PASSWORD': '123',
             'HOST': 'localhost',
@@ -127,3 +127,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
 }
+
+AUTH_USER_MODEL = 'jobs.User'

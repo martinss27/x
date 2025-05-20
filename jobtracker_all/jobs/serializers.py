@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from jobtracker_all.jobs.models import JobApplication, User
+from .models import JobApplication, User
 
 class JobApplicationSerializer(serializers.ModelSerializer):
     class Meta:
