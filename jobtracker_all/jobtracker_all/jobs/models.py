@@ -15,13 +15,9 @@ class JobApplication(models.Model):
         ('offer', 'Offer Received'),
     ]
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='job_applications')
-    user_job_id = models.PositiveBigIntegerField()
     title = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
     position = models.CharField(max_length=100)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
     applied_date = models.DateField(auto_now=True)
     notes = models.TextField(blank=True)
-    
-    class Meta:
-        unique_together = ('user', 'user_job_id')
